@@ -83,9 +83,11 @@ $error ="";
       if($class==6)
       {
         $sql1 = "UPDATE classsix SET uid='".$teacher."' where subject='".$subject."'";
+        $sql3 = "UPDATE allsubjects SET uid='".$teacher."' where subject='".$subject."' AND class='6'";
         $sql2 = "SELECT uid from classsix where subject='".$subject."'";
 
         mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql3);
 
         if ($result=mysqli_query($conn,$sql2))
         {
@@ -103,9 +105,11 @@ $error ="";
       else if($class==7)
       {
         $sql1 = "UPDATE classseven SET uid='".$teacher."' where subject='".$subject."'";
+        $sql3 = "UPDATE allsubjects SET uid='".$teacher."' where subject='".$subject."' AND class='7'";
         $sql2 = "SELECT uid from classseven where subject='".$subject."'";
 
         mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql3);
 
         if ($result=mysqli_query($conn,$sql2))
         {
@@ -123,9 +127,11 @@ $error ="";
       else if($class==8)
       {
         $sql1 = "UPDATE classeight SET uid='".$teacher."' where subject='".$subject."'";
+        $sql3 = "UPDATE allsubjects SET uid='".$teacher."' where subject='".$subject."' AND class='8'";
         $sql2 = "SELECT uid from classeight where subject='".$subject."'";
 
         mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql3);
 
         if ($result=mysqli_query($conn,$sql2))
         {
@@ -143,9 +149,11 @@ $error ="";
       else if($class==9)
       {
         $sql1 = "UPDATE classnine SET uid='".$teacher."' where subject='".$subject."'";
+        $sql3 = "UPDATE allsubjects SET uid='".$teacher."' where subject='".$subject."' AND class='9'";
         $sql2 = "SELECT uid from classnine where subject='".$subject."'";
 
         mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql3);
 
         if ($result=mysqli_query($conn,$sql2))
         {
@@ -163,9 +171,11 @@ $error ="";
       else if($class==10)
       {
         $sql1 = "UPDATE classten SET uid='".$teacher."' where subject='".$subject."'";
+        $sql3 = "UPDATE allsubjects SET uid='".$teacher."' where subject='".$subject."' AND class='10'";
         $sql2 = "SELECT uid from classten where subject='".$subject."'";
 
         mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql3);
 
         if ($result=mysqli_query($conn,$sql2))
         {
@@ -241,6 +251,7 @@ $error ="";
   
   <center><input type="submit" name="submit" value="Assign" onClick="return submit1();" style="width: 60px">
   <button type="submit" formaction="Logged_In_Dashboard.php">Back</button>
+  <button type="submit" formaction="ViewTeachers.php">Assigned Teacher</button>
   <br/><br>
   </form>
 </fieldset>
