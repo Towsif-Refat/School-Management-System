@@ -579,19 +579,7 @@ function checkMname(){
         document.getElementById("erremail").innerHTML = "Invalid email format. Format: example@something.com";
         return false;
       }
-      //Address
-      if(address == "")
-      {
-        document.Reg_Form.address.focus();
-        document.getElementById("erraddress").innerHTML = "Address is required!!";
-        return false;
-      }
-      else if(!addressRegex.test(address))
-      {
-        document.Reg_Form.address.focus();
-        document.getElementById("erraddress").innerHTML = "Letter Only";
-        return false;
-      }
+      
       //Password
 
      // var pass =  document.getElementById("pass").value;
